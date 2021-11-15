@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# multiplyColumn
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This package currently contains one function named multiplyColumn, which takes a data frame, a column name (whose entries are numeric), and a numeric value. It creates a new column that multiplies the entries of the specified column with the input factor and returns the data frame with this new column, as well as a histogram of the new column.
+
+## Installation
+
+You can install the development version of multiplyColumn from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("NaitongChen/multiplyColumn")
+```
+
+## Example
+
+The following contains two example usages along with their outputs of the only function in the multiplyColumn package.
+
+```{r}
+# load packages
+library(multiplyColumn)
+
+# create data frame
+df = data.frame(matrix(rnorm(4),
+        ncol=2, nrow=2,
+        dimnames=list(NULL, c("x1","x2"))))
+
+# examples
+multiplyColumn(df, "x1", 0.5)
+multiplyColumn(df, "x2", 3)
+```
