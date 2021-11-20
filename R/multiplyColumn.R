@@ -37,7 +37,7 @@ multiplyColumn <- function(df, colname, fac) {
   }
 
   # create new column
-  new_colname <- paste(colname, fac, sep = "")
+  new_colname <- paste(fac, colname, sep = "*")
   tib <- dplyr::mutate(df, !!new_colname := !!as.name(colname) * fac)
   # generate histogram of the new column
   hist <- ggplot2::ggplot(tib, ggplot2::aes(x = !!as.name(new_colname))) + ggplot2::geom_histogram()
