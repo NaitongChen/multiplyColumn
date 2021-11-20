@@ -32,7 +32,7 @@ the only function in the multiplyColumn package.
 # load packages
 library(multiplyColumn)
 
-# create data frame
+# create data frame 
 df = data.frame(matrix(rnorm(4),
         ncol=2, nrow=2,
         dimnames=list(NULL, c("x1","x2"))))
@@ -40,9 +40,9 @@ df = data.frame(matrix(rnorm(4),
 # examples
 multiplyColumn(df, "x1", 0.5)
 #> [[1]]
-#>          x1         x2     x10.5
-#> 1 0.5261256 -0.5997634 0.2630628
-#> 2 0.7426543 -0.1710881 0.3713271
+#>           x1         x2      0.5*x1
+#> 1 -0.1820796 -0.5608388 -0.09103979
+#> 2 -1.0839189  0.1929653 -0.54195943
 #> 
 #> [[2]]
 #> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
@@ -53,9 +53,9 @@ multiplyColumn(df, "x1", 0.5)
 ``` r
 multiplyColumn(df, "x2", 3)
 #> [[1]]
-#>          x1         x2        x23
-#> 1 0.5261256 -0.5997634 -1.7992901
-#> 2 0.7426543 -0.1710881 -0.5132643
+#>           x1         x2       3*x2
+#> 1 -0.1820796 -0.5608388 -1.6825165
+#> 2 -1.0839189  0.1929653  0.5788958
 #> 
 #> [[2]]
 #> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.

@@ -37,7 +37,7 @@ The following contains two example usages along with their outputs of the only f
 # load packages
 library(multiplyColumn)
 
-# create data frame
+# create data frame 
 df = data.frame(matrix(rnorm(4),
         ncol=2, nrow=2,
         dimnames=list(NULL, c("x1","x2"))))
