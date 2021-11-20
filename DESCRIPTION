@@ -1,6 +1,6 @@
 Package: multiplyColumn
 Title: Multiply Column by Numeric Factor
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Naitong",
            family = "Chen",
